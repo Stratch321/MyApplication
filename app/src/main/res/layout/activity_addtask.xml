@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Addtask">
+    <!--Создание текстового поля и описание его свойств (где находится, что содержит и т.д) -->
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:hint="Введите название задачи"
+        android:textSize="20dp"
+        android:layout_marginLeft="15dp"
+        android:id="@+id/name_text"
+        android:layout_marginTop="15dp"/>
+    <!--Создание текстового поля и описание его свойств (где находится, что содержит и т.д) -->
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:textSize="20dp"
+        app:layout_constraintTop_toBottomOf="@id/name_text"
+        app:layout_constraintLeft_toLeftOf="@id/name_text"
+        android:hint="Введите описание задачи и цену"
+        android:lines="2"
+        android:id="@+id/task_desc"/>
+    <!--Создание текстового поля и описание его свойств (где находится, что содержит и т.д) -->
+    <EditText
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/datepicker_desc"
+        android:textSize="20dp"
+        app:layout_constraintTop_toBottomOf="@id/task_desc"
+        app:layout_constraintLeft_toLeftOf="@id/task_desc"
+        android:hint="Впишите Сроки работы"
+        android:textColor="@color/white"/>
+    <!--Создание кнопки которая находится в библиотеке androidx и описание её свойств -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/datepicker_desc"
+        app:layout_constraintLeft_toLeftOf="@id/datepicker_desc"
+        android:text="Создать"
+        android:id="@+id/create"
+        android:onClick="pushtask"/>
+    <!--Создание кнопки которая находится в библиотеке androidx и описание её свойств -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/create"
+        app:layout_constraintTop_toTopOf="@id/create"
+        android:layout_marginLeft="55dp"
+        android:text="Просмотреть список"
+        android:onClick="view_list"
+        />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
